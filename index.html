@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enna Dock Website</title>
+    <script>
+        document.addEventListener('keydown', function logKey(e) {
+            console.log({ keyCode: e.keyCode, key: e.key });
+            if (e.isTrusted === false) {
+                if (e.keyCode === 37) {
+                    document.getElementById('dock-button').textContent = 'Left';
+                } else if (e.keyCode === 39) {
+                    document.getElementById('dock-button').textContent = 'Right';
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <h1>enna Dock Website</h1>
+    <span id='dock-button'>Taste</span>
+</body>
+
+</html>
